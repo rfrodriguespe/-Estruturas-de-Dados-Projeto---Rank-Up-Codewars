@@ -14,7 +14,7 @@ package shortestword;
 public class Main {
 
     public static void main(String[] args) {
-        String teste = "a caralho ta buceta rola cu";
+        String teste = "teste rodrigo oi sabrina professora";
         System.out.println(shortestword.FindShort.menorPalavra(teste));
     }
 
