@@ -13,7 +13,7 @@ public class Main {
     
     public static void main(String[] args) {
         
-        long[] teste = DivSeven.seven(3554571);
+        long[] teste = DivSeven.seven(355457129);
         System.out.print("[");
         for (int i = 0; i < 2;i++){
             if (i==0) {
