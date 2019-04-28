@@ -9,14 +9,13 @@ package ARuleofDivisibilityBy7;
  *
  * @author Rodrigo
  */
-public class Seven {
+public class DivSeven {
 
     public static long[] seven(long m) {
         int passes = 0;
         while ((m + "").length() > 2) {
             m = (m/10) - (2 * (m%10));
             passes++;
-
         }
         long[] result = {m,passes};
         return result;
