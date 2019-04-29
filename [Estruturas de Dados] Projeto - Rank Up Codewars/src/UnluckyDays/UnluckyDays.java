@@ -23,5 +23,11 @@ public class UnluckyDays {
         }
         return ud;
     }
+    
+    public static void main(String[] args) {
+
+        System.out.println(unluckyDays(1986));
+
+    }
 
 }

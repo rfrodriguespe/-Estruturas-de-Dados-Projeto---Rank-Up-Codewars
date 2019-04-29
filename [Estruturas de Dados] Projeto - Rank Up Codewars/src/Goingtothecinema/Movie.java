@@ -36,4 +36,6 @@ public class Movie {
         System.out.println(movie(card, ticket, perc));
          
     }
+    
+    
 }

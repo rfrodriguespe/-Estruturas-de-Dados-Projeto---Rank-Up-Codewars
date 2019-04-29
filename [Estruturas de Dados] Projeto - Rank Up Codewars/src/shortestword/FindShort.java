@@ -28,4 +28,9 @@ public class FindShort {
         return menor;
     }
     
+    public static void main(String[] args) {
+        String teste = "teste rodrigo oi sabrina professora";
+        System.out.println(shortestword.FindShort.menorPalavra(teste));
+    }
+    
 }

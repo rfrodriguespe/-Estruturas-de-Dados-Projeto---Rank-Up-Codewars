@@ -24,5 +24,9 @@ public class SumOfTriangularNumbers {
     private static int sumTriangularNumbers2(int n) {
         return (n==0) ? 0 : n + sumTriangularNumbers2(n-1);
     }
+    
+    public static void main(String[] args) {
+        System.out.println(sumTriangularNumbers(4));
+    }
 
 }

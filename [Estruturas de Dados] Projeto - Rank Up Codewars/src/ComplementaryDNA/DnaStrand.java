@@ -42,4 +42,10 @@ public class DnaStrand {
         return dnaComp;
     }
     
+    public static void main(String[] args) {
+        String dna = "GTAT";
+        
+        System.out.println(DnaStrand.makeComplement(dna));
+        
+    }
 }
