@@ -13,43 +13,26 @@ package Goingtothecinema;
 public class Movie {
     
     public static int movie(int card, int ticket, double perc) {
-        int time=1;
+        int time=0;
         int sysA = 0;
-        int sysB = card;
+        double sysB = card;
+        double newTicket= ticket*perc;
         
-        do {
-            sysA = ticket*time;
-            sysB += (Math.pow(perc, time))*ticket;
+        while (sysA < sysB) {
             time++;
-        } while (sysA < sysB);
-        return time+1;
+            sysA += ticket;
+            sysB += newTicket;
+            newTicket *= perc;
+        }
+        return time;
     }
     
     public static void main(String[] args) {
         
-        int card = 800;
+        int card = 500;
         int ticket =15;
         double perc = 0.90;
         System.out.println(movie(card, ticket, perc));
-        
-        
-        int time=1;
-        int sysA = 0;
-        double sysB = 0;
-        
-        for (int i=0;i<3;i++){
-            sysA = ticket*time;
-            sysB += (Math.pow(perc, time))*ticket;
-            //System.out.println("Systam A "+sysA);
-            //System.out.println("Systam B "+sysB);
-            time++;
-        }
-        sysA=(movie(card, ticket, perc)-1)*ticket;
-        sysB+=card;
-        
-        
-        System.out.println("Systam A "+sysA);
-        System.out.println("Systam B "+sysB);
-        
+         
     }
 }
