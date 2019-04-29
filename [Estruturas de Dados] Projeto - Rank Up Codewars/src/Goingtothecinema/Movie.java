@@ -13,16 +13,16 @@ package Goingtothecinema;
 public class Movie {
     
     public static int movie(int card, int ticket, double perc) {
-        int time=1;
+        int time=0;
         int sysA = 0;
         double sysB = card;
-        double newTicket= ticket*perc;
+        double newTicket= ticket;
         
-        while (sysA < Math.ceil(sysB)) {
+        while (sysA <= Math.ceil(sysB)) {
             sysA += ticket;
             sysB += newTicket;
             newTicket *= perc;
-            if (sysA < Math.ceil(sysB)) time++;
+            if (sysA <= Math.ceil(sysB)) time++;
         }
         
         return time;
