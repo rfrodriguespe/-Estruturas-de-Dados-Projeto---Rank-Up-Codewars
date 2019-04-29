@@ -19,15 +19,15 @@ public class Movie {
         
         do {
             sysA = ticket*time;
-            sysB += Math.round((Math.pow(perc, time))*ticket);
+            sysB += (Math.pow(perc, time))*ticket;
             time++;
         } while (sysA < sysB);
-        return time;
+        return time+1;
     }
     
     public static void main(String[] args) {
         
-        int card = 500;
+        int card = 800;
         int ticket =15;
         double perc = 0.90;
         System.out.println(movie(card, ticket, perc));
@@ -44,6 +44,7 @@ public class Movie {
             //System.out.println("Systam B "+sysB);
             time++;
         }
+        sysA=(movie(card, ticket, perc)-1)*ticket;
         sysB+=card;
         
         
