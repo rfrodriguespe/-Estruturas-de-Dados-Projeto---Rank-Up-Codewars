@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package shortestword;
+package kata7kyu;
 
 import java.util.Arrays;
 import java.util.List;
@@ -30,7 +30,7 @@ public class FindShort {
     
     public static void main(String[] args) {
         String teste = "teste rodrigo oi sabrina professora";
-        System.out.println(shortestword.FindShort.menorPalavra(teste));
+        System.out.println(kata7kyu.FindShort.menorPalavra(teste));
     }
     
 }
