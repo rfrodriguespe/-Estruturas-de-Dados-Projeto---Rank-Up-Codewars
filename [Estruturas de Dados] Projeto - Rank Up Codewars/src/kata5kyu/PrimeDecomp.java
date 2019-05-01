@@ -31,6 +31,12 @@ public class PrimeDecomp {
                 n /= i;
             }
         }
+        
+        // Conseguindo o primeiro e último número repetido, para saber quantos eu tenho no array
+//        System.out.println(fatores.indexOf(2));
+//        System.out.println(fatores.lastIndexOf(2));
+        //
+        
 
         for (int numero : fatores) {
             System.out.println(numero);
