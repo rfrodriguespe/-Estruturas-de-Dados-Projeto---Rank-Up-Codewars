@@ -63,32 +63,71 @@ public class MostFrequentWeekdays {
 
         if (calendario.isLeapYear(year)) {
             dias = new String[2];
+            while (dias[0] == null) {
+                if (qtdeSeg == 53 && qtdeDom != 53) {
+                    dias[0] = "Monday";
+                    dias[1] = "Tuesday";
+                    break;
+                }
+                if (qtdeTer == 53 && qtdeSeg != 53) {
+                    dias[0] = "Tuesday";
+                    dias[1] = "Wednesday";
+                    break;
+                }
+                if (qtdeQua == 53 && qtdeTer != 53) {
+                    dias[0] = "Wednesday";
+                    dias[1] = "Thursday";
+                    break;
+                }
+                if (qtdeQui == 53 && qtdeQua != 53) {
+                    dias[0] = "Thursday";
+                    dias[1] = "Friday";
+                    break;
+                }
+                if (qtdeSex == 53 && qtdeQui != 53) {
+                    dias[0] = "Friday";
+                    dias[1] = "Saturday";
+                    break;
+                }
+                if (qtdeSab == 53 && qtdeSex != 53) {
+                    dias[0] = "Saturday";
+                    dias[1] = "Sunday";
+                    break;
+                }
+                if (qtdeDom == 53 && qtdeSab != 53) {
+                    dias[0] = "Sunday";
+                    dias[1] = "Monday";
+                    break;
+                }
+
+            }
             
-            if (qtdeSeg==53 && dias[0] != null) dias[0] = "Monday";
-            if (qtdeTer==53 && dias[0] != null) dias[0] = "Tuesday";
-            if (qtdeQua==53 && dias[0] != null) dias[0] = "Wednesday";
-            if (qtdeQui==53 && dias[0] != null) dias[0] = "Thursday";
-            if (qtdeSex==53 && dias[0] != null) dias[0] = "Friday";
-            if (qtdeSab==53 && dias[0] != null) dias[0] = "Saturday";
-            if (qtdeDom==53 && dias[0] != null) dias[0] = "Sunday";
+
             
-            
-            if (qtdeSeg==53 && dias[0] != null) dias[1] = "Monday";
-            if (qtdeTer==53 && dias[0] != null) dias[1] = "Tuesday";
-            if (qtdeQua==53 && dias[0] != null) dias[1] = "Wednesday";
-            if (qtdeQui==53 && dias[0] != null) dias[1] = "Thursday";
-            if (qtdeSex==53 && dias[0] != null) dias[1] = "Friday";
-            if (qtdeSab==53 && dias[0] != null) dias[1] = "Saturday";
-            if (qtdeDom==53 && dias[0] != null) dias[1] = "Sunday";
+
         } else {
             dias = new String[1];
-            if (qtdeSeg==53) dias[0] = "Monday";
-            if (qtdeTer==53) dias[0] = "Tuesday";
-            if (qtdeQua==53) dias[0] = "Wednesday";
-            if (qtdeQui==53) dias[0] = "Thursday";
-            if (qtdeSex==53) dias[0] = "Friday";
-            if (qtdeSab==53) dias[0] = "Saturday";
-            if (qtdeDom==53) dias[0] = "Sunday";
+            if (qtdeSeg == 53) {
+                dias[0] = "Monday";
+            }
+            if (qtdeTer == 53) {
+                dias[0] = "Tuesday";
+            }
+            if (qtdeQua == 53) {
+                dias[0] = "Wednesday";
+            }
+            if (qtdeQui == 53) {
+                dias[0] = "Thursday";
+            }
+            if (qtdeSex == 53) {
+                dias[0] = "Friday";
+            }
+            if (qtdeSab == 53) {
+                dias[0] = "Saturday";
+            }
+            if (qtdeDom == 53) {
+                dias[0] = "Sunday";
+            }
         }
 
         return dias;
@@ -100,11 +139,13 @@ public class MostFrequentWeekdays {
 
     public static void main(String[] args) throws ParseException {
 
-        int ano = 1985;
+        int ano = 1004;
+
         
-        for (int i=0; i < mostFrequentDays(ano).length;i++){
+        for (int i = 0; i < mostFrequentDays(ano).length; i++) {
             System.out.println(mostFrequentDays(ano)[i]);
         }
-        
+       
+
     }
 }
