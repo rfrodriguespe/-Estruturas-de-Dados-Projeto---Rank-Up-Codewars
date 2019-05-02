@@ -15,12 +15,12 @@ public class Tortoise {
     public static int[] race(int v1, int v2, int g) {
         double t;
         if (v1 >= v2){
-            return new int[]{-1,-1,-1};
+            return null;
         } else {
             t = (double) g / (double )(v2-v1);
-            int horas = (int) Math.round(t);
-            int minutos = Math.round(((int)(t*60)) - (horas*60));
-            int segundos = (int) Math.round((t*60-minutos)*60)- (horas*3600)  ;
+            int horas = (int) Math.floor(t);
+            int minutos = (int) Math.floor(((int)(t*60)) - (horas*60));
+            int segundos = (int) Math.floor((t*60-minutos)*60)- (horas*3600);
             
             
             return new int[]{horas,minutos,segundos};
