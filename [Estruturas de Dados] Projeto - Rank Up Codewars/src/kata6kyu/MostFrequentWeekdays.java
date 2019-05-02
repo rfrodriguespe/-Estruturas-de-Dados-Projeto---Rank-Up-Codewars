@@ -145,7 +145,5 @@ public class MostFrequentWeekdays {
         for (int i = 0; i < mostFrequentDays(ano).length; i++) {
             System.out.println(mostFrequentDays(ano)[i]);
         }
-       
-
     }
 }

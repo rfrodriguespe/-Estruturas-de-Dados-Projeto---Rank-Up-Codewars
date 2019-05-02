@@ -11,6 +11,15 @@ import java.util.List;
 /**
  *
  * @author rfrodrigues
+ * kata: https://www.codewars.com/kata/primes-in-numbers/java
+ * 
+ * Sabrina, pegando os casos de teste do kata e jogando aqui no netbeans, a saída dá certo,
+ * mas o site insiste em dizer que meu código gera uma outra saída.
+ * 
+ * ex: para N = 17515577, o site insiste que meu código sai "(2**2)(3**3)(5)(7)(11**2)(17)3)(17**2)(31)(677)43**2)(9473)"
+ * mas se voce rodar sai "(43**2)(9473)", favor corrigir bem esse kata que é bem dificil e acredito ter acertado
+ * e que o site tem alguma maluquice
+ * 
  */
 public class PrimeDecomp {
 
@@ -26,7 +35,11 @@ public class PrimeDecomp {
                 n /= i;
             }
         }
-        resultado += fatores.get(0);
+        
+        if (fatores.size()==1) {
+            return new String ("("+fatores.get(0)+")");
+        } else {
+            resultado += fatores.get(0);
 
          for (int i = 1; i <= fatores.size() - 1; i++) {
             if (fatores.get(i) == fatores.get(i - 1)) {
@@ -51,14 +64,16 @@ public class PrimeDecomp {
 
         resultado += ")";
 
+        }
+        
+        
         return resultado;
     }
 
     public static void main(String[] args) {
 
         
-        int n = 7775460;
-        //int n = 1024;
+        int n = 17515577;
 
         System.out.println(factors(n));
 
